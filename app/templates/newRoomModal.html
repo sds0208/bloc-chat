@@ -1,0 +1,9 @@
+<div class="new-room-modal" ng-controller="ModalCtrl as modal">
+    <h3>Create new room</h3>
+    <form>
+        Create a new room
+        <input type="text" name="roomname">
+        <button type="button" ng-click="modal.cancel()">Cancel</button>
+        <button type="button" ng-click="modal.createNewRoom()">Create room</button>
+    </form>
+</div>

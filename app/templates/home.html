@@ -1,10 +1,11 @@
 <body ng-controller="HomeCtrl as home">
     <div class="chat-room-sidebar">
-        <h1>BLOC CHAT</h1>
+        <h2>BLOC CHAT</h2>
+        <button type="button" ng-click="home.open()">New room</button>            
         <div class="chat-room-list" ng-repeat="room in home.allRooms">
             <div class="chat-room">
                 {{ room.$value }}
             </div>
         </div>
-    </div>    
+    </div>
 </body>
