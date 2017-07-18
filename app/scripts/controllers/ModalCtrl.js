@@ -1,19 +1,9 @@
 (function() {
-    function ModalCtrl($uibModalInstance, Room)  {
-        var modal = this;
+    function ModalCtrl($uibModal) {
 
-        //close method
-        modal.cancel = function() {
-            $uibModalInstance.dismiss();
-        };
-        //submit data to Firebase
-        modal.createNewRoom = function()  {
-            Room.add(modal.newChatRoom);
-            $uibModalInstance.close();
-        };
-    }
+    }  
 
     angular
-        .module('blocChat', ['ui.bootstrap'])
-        .controller('ModalCtrl', [ModalCtrl])
+        .module('blocChat')
+        .controller('ModalCtrl', ['$uibModal', ModalCtrl]);
 })();
