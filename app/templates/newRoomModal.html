@@ -1,9 +1,9 @@
-<div class="new-room-modal" ng-controller="ModalCtrl as modal">
+<div class="new-room-modal">
     <h3>Create new room</h3>
     <form>
-        Create a new room
-        <input type="text" name="roomname">
-        <button type="button" ng-click="modal.cancel()">Cancel</button>
-        <button type="button" ng-click="modal.createNewRoom()">Create room</button>
+        <input type="text" name="roomname" placeholder="enter room name">
+        <button type="button" ng-click="cancel()">Cancel</button>
+        <button type="button" ng-click="$dismiss()">Dismiss</button>
+        <button type="button" ng-click="createNewRoom()">Create room</button>
     </form>
 </div>

@@ -14,19 +14,46 @@ body  {
     width: 30%;
     height: 900px;
     padding-top: 1em;
-    border-right: 2px solid white;
+    border-right: 3.5px solid white;
 }
 
 .chat-room-sidebar h2 {
     padding-left: .6em;
-    border-bottom: 2px solid white;
+    padding-right: .6em;
+    display: inline-block;
+    text-decoration: underline;
 }
-.chat-room  {
+.chat-room,
+.new-room-button  {
     margin: 1em;
+    padding-left: .4em;
     font-size: 1.1em;
     font-weight: bold;
 }
 
-.new-room-modal {
-    z-index: 100;
+button  {
+  color: darkgrey;
+  box-shadow: 0 0 10px lightgrey;
+}
+.new-room-button  {
+    margin-left: 1.1em;
+}
+
+@media (max-width: 440px) {
+    body  {
+        display: relative;
+    }
+    .chat-room-sidebar  {
+        display: absolute;
+        height: auto;
+        width: 100%;
+        border-bottom: 3.5px solid white;
+        border-right: none;
+    }
+    .chat-room-sidebar h2 {
+        display: block;
+    }
+    .chat-room  {
+        padding-bottom: 1em;
+    }
 }

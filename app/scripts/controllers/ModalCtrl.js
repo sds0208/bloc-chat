@@ -1,9 +1,15 @@
 (function() {
-    function ModalCtrl($uibModal) {
+    function ModalCtrl($uibModalInstance, $scope) {
 
-    }  
+        //close Modal
+        $scope.cancel = function()  {
+            $uibModalInstance.dismiss('cancel');
+        };
+        //submit data to Firebase
+
+    }
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['$uibModal', ModalCtrl]);
+        .controller('ModalCtrl', ['$scope', '$uibModalInstance', ModalCtrl]);
 })();
