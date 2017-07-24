@@ -1,9 +1,8 @@
 <div class="new-room-modal">
     <h3>Create new room</h3>
     <form>
-        <input type="text" name="roomname" placeholder="enter room name">
+        <input type="text" placeholder="enter room name" ng-model="modal.newRoom.name">
         <button type="button" ng-click="cancel()">Cancel</button>
-        <button type="button" ng-click="$dismiss()">Dismiss</button>
         <button type="button" ng-click="createNewRoom()">Create room</button>
     </form>
 </div>
