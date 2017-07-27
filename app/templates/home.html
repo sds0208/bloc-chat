@@ -3,7 +3,7 @@
         <h2>BLOC CHAT</h2>
         <button type="button" class="new-room-button" ng-click="openModal()">New room</button>
         <div class="chat-room-list" ng-repeat="room in home.allRooms">
-            <a href="" class="chat-room" ng-click="activateRoom(); home.roomIsSelected = true">{{ room.name }}</a>
+            <a href="" class="chat-room" ng-click="activateRoom(room); home.roomIsSelected = true">{{ room.name }}</a>
 
         </div>
     </div>
