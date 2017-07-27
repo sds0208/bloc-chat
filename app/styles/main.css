@@ -2,11 +2,9 @@ body  {
     background-color: lightgrey;
     color: white;
     font-family: "Muli";
-    display: flex;
     min-height: 100vh;
-    flex-direction: column;
     margin-top: 0;
-}
+  }
 
 .chat-room-sidebar  {
     margin-top; 0;
@@ -15,12 +13,13 @@ body  {
     height: 900px;
     padding-top: 1em;
     border-right: 3.5px solid white;
+    display: inline-block;
+
 }
 
 .chat-room-sidebar h2 {
     padding-left: .6em;
     padding-right: .6em;
-    display: inline-block;
     text-decoration: underline;
 }
 .chat-room,
@@ -37,6 +36,26 @@ button  {
 }
 .new-room-button  {
     margin-left: 1.1em;
+    max-width: 170px;
+}
+
+.message-list-container {
+    width: 70%;
+    float: right;
+    display: inline-block;
+}
+
+.room-name  {
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: darkgrey;
+}
+
+.message  {
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
 @media (max-width: 440px) {
