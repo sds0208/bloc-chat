@@ -3,7 +3,7 @@
         var x = this;
         //close Modal
         $scope.cancel = function()  {
-            $uibModalInstance.dismiss('cancel');
+            $uibModalInstance.close();
         };
         //submit data to Firebase
         $scope.createNewRoom = function() {

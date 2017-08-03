@@ -10,7 +10,13 @@
         <div class="room-name">
             {{ home.currentRoom.name }}
         </div>
-        <div class="message" ng-repeat="message in home.messages">
+        <div class="message" ng-repeat="message in home.messages" ng-class-odd="'odd-message'" ng-class-even="'even-message'">
+            <div class="message-content">
+              {{ message.sentAt }}
+            </div>
+            <div class="message-content">
+                {{ message.username }}:
+            </div>
             <div class="message-content">
                 {{ message.content }}
             </div>

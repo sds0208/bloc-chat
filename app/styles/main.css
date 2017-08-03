@@ -21,6 +21,9 @@ body  {
     padding-left: .6em;
     padding-right: .6em;
     text-decoration: underline;
+    color: deepskyblue;
+    font-weight: bold;
+
 }
 .chat-room,
 .new-room-button  {
@@ -28,6 +31,14 @@ body  {
     padding-left: .4em;
     font-size: 1.1em;
     font-weight: bold;
+}
+
+.chat-room-list a  {
+    color: white;
+}
+
+.chat-room-list a:active {
+    color: white;
 }
 
 button  {
@@ -54,9 +65,18 @@ button  {
 }
 
 .message  {
-    margin-top: 30px;
-    margin-left: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 10px;
     color: white;
+}
+
+.odd-message  {
+    background-color: skyblue;
+}
+
+.even-message   {
+    background-color: deepskyblue;
 }
 
 @media (max-width: 440px) {
