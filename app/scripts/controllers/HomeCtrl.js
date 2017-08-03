@@ -19,6 +19,7 @@
         $scope.activateRoom = function (roomSelected) {
             x.currentRoom = roomSelected;
             x.messages = Message.getByRoomId(x.currentRoom.$id);
+            console.log(x.currentRoom.$id);
         };
     }
 
