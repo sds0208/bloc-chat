@@ -1,6 +1,19 @@
 <body ng-controller="HomeCtrl as home">
     <div class="chat-room-sidebar">
-        <h2>BLOC CHAT</h2>
+        <div id="logo">
+            <div id="bloc">
+                <div class="odd">B</div>
+                <div class="even">L</div>
+                <div class="odd">O</div>
+                <div class="even">C</div>
+            </div>
+            <div id="chat">
+                <div class="even">C</div>
+                <div class="odd">H</div>
+                <div class="even">A</div>
+                <div class="odd">T</div>
+            </div>
+        </div>
         <button type="button" class="new-room-button" ng-click="openModal()">New room</button>
         <div class="chat-room-list" ng-repeat="room in home.allRooms">
             <a href="" class="chat-room" ng-click="activateRoom(room)">{{ room.name }}</a>
@@ -12,7 +25,7 @@
         </div>
         <div class="message" ng-repeat="message in home.messages" ng-class-odd="'odd-message'" ng-class-even="'even-message'">
             <div class="message-content">
-              {{ message.sentAt }}
+                {{ message.sentAt }}
             </div>
             <div class="message-content">
                 {{ message.username }}:
