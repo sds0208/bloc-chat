@@ -6,6 +6,7 @@
         x.currentRoom = "";
         x.messages = "";
         x.roomIsSelected = false;
+        //x.currentUser = $cookies.get('blocChatCurrentUser');
 
         $scope.openModal = function () {
             var modalInstance = $uibModal.open({
@@ -21,6 +22,12 @@
             x.messages = Message.getByRoomId(x.currentRoom.$id);
             console.log(x.currentRoom.$id);
         };
+
+        /*$scope.sendMessage = function()  {
+            x.newMessage.username = x.currentUser;
+            x.newMessage.roomId = x.currentRoom.$id;
+            Message.send(x.newMessage);
+        };*/
     }
 
     angular

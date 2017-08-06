@@ -112,6 +112,10 @@ button  {
     background-color: deepskyblue;
 }
 
+.message-text-box   {
+  color: darkgrey;
+}
+
 @media (max-width: 440px) {
     body  {
         display: relative;
