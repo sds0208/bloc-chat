@@ -3,11 +3,11 @@
         var x = this;
         x.allRooms = Room.all;
 
-        x.currentRoom = "";
-        x.messages = "";
+        x.currentRoom = null;
+        x.messages = null;
         x.roomIsSelected = false;
         x.currentUser = $cookies.get('blocChatCurrentUser');
-        x.timeStamp = "";
+
 
         $scope.openModal = function () {
             var modalInstance = $uibModal.open({
@@ -22,13 +22,18 @@
             x.currentRoom = roomSelected;
             x.messages = Message.getByRoomId(x.currentRoom.$id);
             console.log(x.currentRoom.$id);
+            x.roomIsSelected = true;
         };
 
         $scope.sendMessage = function(newMessage)  {
             x.newMessage.username = x.currentUser;
-            x.newMessage.roomId = x.currentRoom.$id;
+            x.newMessage.roomID = x.currentRoom.$id;
+            var d = new Date();
+            x.newMessage.sentAt = d.toLocaleTimeString();
             Message.send(x.newMessage);
+            document.getElementById("message-text-box").value = "";
         };
+    
     }
 
     angular
