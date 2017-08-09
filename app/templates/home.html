@@ -1,18 +1,14 @@
 <body ng-controller="HomeCtrl as home">
     <div class="chat-room-sidebar">
         <div id="logo">
-            <div id="bloc">
                 <div class="odd">B</div>
                 <div class="even">L</div>
                 <div class="odd">O</div>
                 <div class="even">C</div>
-            </div>
-            <div id="chat">
                 <div class="even">C</div>
                 <div class="odd">H</div>
                 <div class="even">A</div>
                 <div class="odd">T</div>
-            </div>
         </div>
         <button type="button" class="new-room-button" ng-click="openModal()">New room</button>
         <div class="chat-room-list" ng-repeat="room in home.allRooms">
@@ -23,18 +19,20 @@
         <div class="room-name">
             {{ home.currentRoom.name }}
         </div>
-        <div class="message" ng-repeat="message in home.messages" ng-class-odd="'odd-message'" ng-class-even="'even-message'">
-            <div class="message-content">
-                {{ message.sentAt }}
-            </div>
-            <div class="message-content">
-                {{ message.username }}:
-            </div>
-            <div class="message-content">
-                {{ message.content }}
+        <div id="message-container">
+            <div class="message" ng-repeat="message in home.messages" ng-class-odd="'odd-message'" ng-class-even="'even-message'">
+                <div class="message-content">
+                    {{ message.sentAt }}
+                </div>
+                <div class="message-content">
+                    {{ message.username }}:
+                </div>
+                <div class="message-content">
+                    {{ message.content }}
+                </div>
             </div>
         </div>
-        <div ng-show="roomIsSelected">
+        <div ng-show="x.roomIsSelected">
             <form>
                 Enter message:<br>
                 <input type="text" id="message-text-box" name="message" ng-model="home.newMessage.content"><br>
