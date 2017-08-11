@@ -33,7 +33,7 @@
             Message.send(x.newMessage);
             document.getElementById("message-text-box").value = "";
         };
-    
+
     }
 
     angular
