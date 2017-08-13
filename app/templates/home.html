@@ -32,11 +32,11 @@
                 </div>
             </div>
         </div>
-        <div ng-show="home.roomIsSelected">
+        <div id="enter-message" ng-show="home.roomIsSelected">
             <form>
                 Enter message:<br>
-                <input type="text" id="message-text-box" name="message" ng-model="home.newMessage.content" ng-enter="sendMessage(newMessage)"><br>
-                <button type="button" class="new-room-button" ng-click="sendMessage(newMessage)">Send</button>
+                <input type="text" id="message-text-box" name="message" ng-model="home.newMessage.content" ng-keypress="checkIfEnterKeyWasPressed($event)"><br>
+                <button type="button" id="send-button" class="new-room-button" ng-click="sendMessage(newMessage)">Send</button>
             </form>
         </div>
     </div>

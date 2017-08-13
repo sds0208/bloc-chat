@@ -1,7 +1,7 @@
 <div class="new-room-modal">
     <h3>Create new room</h3>
     <form>
-        <input type="text" placeholder="enter room name" ng-model="modal.newRoom.name" maxlength="15">
+        <input type="text" placeholder="enter room name" ng-model="modal.newRoom.name" ng-keypress="pressEnterCreateNewRoom($event)" maxlength="15">
         <button type="button" ng-click="cancel()">Cancel</button>
         <button type="button" ng-click="createNewRoom()">Create room</button>
     </form>

@@ -11,6 +11,13 @@
             $uibModalInstance.close();
         };
 
+        $scope.pressEnterCreateNewRoom = function($event){
+            var keyCode = $event.keyCode;
+            if (keyCode === 13) {
+                $scope.createNewRoom();
+            }
+        };
+
         $scope.createUsername = function()  {
             $cookies.put('blocChatCurrentUser', x.username);
             if (x.username !== undefined && x.username !== "") {
@@ -18,6 +25,14 @@
             }
             console.log(x.username);
         };
+
+        $scope.pressEnterCreateUsername = function($event){
+            var keyCode = $event.keyCode;
+            if (keyCode === 13) {
+                $scope.createUsername();
+            }
+        };
+
     }
 
     angular

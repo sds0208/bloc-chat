@@ -34,6 +34,12 @@
             document.getElementById("message-text-box").value = "";
         };
 
+        $scope.checkIfEnterKeyWasPressed = function($event){
+            var keyCode = $event.keyCode;
+            if (keyCode === 13) {
+                $scope.sendMessage();
+            }
+        };
     }
 
     angular
