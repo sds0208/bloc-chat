@@ -5,8 +5,22 @@
     margin: 0 auto;
     position: absolute;
     top: 20%;
+    display: block;
 }
 
 form  {
-  padding: 10px;
+    padding: 10px;
+}
+
+input  {
+    width: 80%;
+}
+
+@media (min-width: 768px)  {
+    .modal  {
+        width: 60%;
+    }
+    input  {
+        width: 50%;
+    }
 }
