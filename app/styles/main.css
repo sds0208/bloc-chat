@@ -1,5 +1,5 @@
 body  {
-    background-color: lightgrey;
+    background-color: white;
     color: white;
     font-family: 'Saira Semi Condensed', sans-serif;
     min-height: 100vh;
@@ -9,7 +9,7 @@ body  {
 
 .chat-room-sidebar  {
     margin-top; 0;
-    background-color: darkgrey;
+    background-color: lightgrey;
     width: 30%;
     height: 900px;
     border-right: 3.5px solid white;
@@ -18,7 +18,6 @@ body  {
     text-align: center;
     font-weight: 800;
 }
-
 
 #logo  {
   display: grid;
@@ -97,7 +96,7 @@ button  {
     background-color: deepskyblue;
 }
 
-#message-text-box   {
+#enter-message   {
   color: darkgrey;
 }
 
@@ -110,10 +109,8 @@ button  {
     .chat-room-sidebar  {
         display: flex;
         flex-direction: column;
-        height: auto;
-        max-height: 65%;
+        height: 65%;
         width: 100%;
-        border-bottom: 3.5px solid white;
         border-right: none;
         text-align: center;
         padding-bottom: 1.5em;
@@ -121,30 +118,47 @@ button  {
 
     .new-room-button  {
         align-self: center;
+        font-size: .5em;
+        font-weight: normal;
+        padding-bottom: .2em;
+        text-align: center;
     }
 
+    .chat-room-list   {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     .chat-room  {
-        padding-bottom: 1em;
+      font-size: .75em;
+      margin: 0;
+      padding: 0;
     }
 
     .message-list-container   {
         position: absolute;
-        top: 70%;
+        top: 66%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: stretch;
         min-width: 100%;
+
     }
 
     .room-name,
     #enter-message  {
-      align-self: center;
-      margin-left: 0;
+        align-self: center;
+        margin-left: 0;
+        padding-bottom: .38em;
+    }
+
+    .room-name  {
+        margin-bottom: 1em;
     }
 
     #enter-message  {
-      text-align: center;
+        text-align: center;
     }
 
 
@@ -152,8 +166,8 @@ button  {
     .message-content  {
         min-width: 100%;
         padding: 3%, 10%, 3%, 10%;
+        font-size: .85em;
     }
-
 
 }
 
@@ -167,5 +181,5 @@ button  {
 
     .message-list-container {
         width: 80%;
-    }    
+    }
 }
