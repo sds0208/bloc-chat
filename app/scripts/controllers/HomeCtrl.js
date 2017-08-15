@@ -2,11 +2,9 @@
     function HomeCtrl(Room, $uibModal, $scope, $cookies, Message) {
         var x = this;
         x.allRooms = Room.all;
-
         x.currentRoom = null;
         x.messages = null;
         x.roomIsSelected = false;
-        x.currentUser = $cookies.get('blocChatCurrentUser');
 
 
         $scope.openModal = function () {
@@ -26,7 +24,7 @@
         };
 
         $scope.sendMessage = function(newMessage)  {
-            x.newMessage.username = x.currentUser;
+            x.newMessage.username = $cookies.get('blocChatCurrentUser');
             x.newMessage.roomID = x.currentRoom.$id;
             var d = new Date();
             x.newMessage.sentAt = d.toLocaleTimeString();
@@ -40,6 +38,7 @@
                 $scope.sendMessage();
             }
         };
+
     }
 
     angular
